@@ -1,5 +1,5 @@
 package banco.entidades;
-
+//teste
 public class Usuario{
     private String idUsuario;
     private String nome;
