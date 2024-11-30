@@ -1,8 +1,22 @@
-package banco;
+package banco.jdbc;
 import java.sql.Connection; //preciso conectar no BD
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+public class TesteConexaoMySQL {
+    public static void main(String[] args) throws SQLException{
+        final String url = "jdbc:mysql://localhost:3306";
+        final String usuario = "root";
+        final String senha = "010422";
+
+        Connection conexao = DriverManager.getConnection(url, usuario, senha);
+
+        System.out.println("Conexão efetuada");
+        conexao.close();
+    }
+}
+
+/*
 public class ConexaoMySQL{
     private static final String url = "jdbc:mysql://localhost:3306/equilibrabd"; //lembrar de inserir o endereço do bd
     private static final String username = "root";
@@ -18,7 +32,7 @@ public class ConexaoMySQL{
     public static Connection getConexao(){
         String driverName = "com.mysql.jdbc.Driver";
         try{
-            Class.forName(driverName);
+            Class.forName(driverName);   
         }catch(ClassNotFoundException e){
             e.printStackTrace();
         }
@@ -44,9 +58,9 @@ public class ConexaoMySQL{
 
     }
 
-}
+} ---------------
 
-/* public class ConexaoMySQL {
+ public class ConexaoMySQL {
     public static String status = "Não conectou :( ";
 
     public ConexaoMySQL(){
