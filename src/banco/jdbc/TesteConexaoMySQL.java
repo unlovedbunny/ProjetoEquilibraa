@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 public class TesteConexaoMySQL {
     public static void main(String[] args) throws SQLException{
-        final String url = "jdbc:mysql://localhost:3306";
+        final String url = "jdbc:mysql://localhost?verifyServerCertificate=false&useSSL=true";
         final String usuario = "root";
         final String senha = "010422";
 
