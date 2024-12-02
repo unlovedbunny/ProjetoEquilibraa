@@ -1,5 +1,5 @@
-package banco.jdbc;
-
+package banco.jdbc.tabelas;
+import banco.jdbc.Conexao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
