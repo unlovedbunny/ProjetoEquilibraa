@@ -1,6 +1,6 @@
 package banco.jdbc.tabelas;
 
-import banco.jdbc.Conexao;
+import banco.jdbc.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -26,9 +26,8 @@ public class NovoUsuario {
             inserirUsuario(conexao, nome, telefone, endereco, numero, cidade, estado, genero);
 
 
-        } finally {
-            entrada.close();
-            conexao.close();
+        } catch (SQLException e) {
+            
         }
     }
 
@@ -128,6 +127,7 @@ public class NovoUsuario {
         try {
             stmt.execute();
             System.out.println("Usuário incluído com sucesso!");
+            
         } catch (SQLException e) {
             System.err.println("Erro ao incluir usuário: " + e.getMessage());
         }
