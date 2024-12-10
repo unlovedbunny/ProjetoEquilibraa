@@ -2,5 +2,9 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "c:\\Users\\dudin\\Downloads\\mysql-connector-j-9.1.0\\mysql-connector-j-9.1.0\\mysql-connector-j-9.1.0.jar"
-    ]
-}
+    ], //colocando os arquivos .clas em um diretório separado (todos os arquivos .class agr serão gerados na pasta bin ao invés da src)
+    "java.project.outputPath": "bin",
+    "files.exclude": {
+        "**/*.class": true //todos esses arquivos estão ocultados dentro da padsta bin 
+    }
+} 

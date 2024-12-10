@@ -15,7 +15,7 @@ public class NovoPersonal {
         // Coletando dados do usuário
         System.out.println("Informe o ID do usuário:");
         int idUsuario = entrada.nextInt();
-        entrada.nextLine(); // Limpar a linha
+        entrada.nextLine(); // Limpar a linha 
 
         System.out.println("CNPJ do personal:");
         String cnpj = entrada.nextLine().trim();
